@@ -1,13 +1,13 @@
 {
   "name": "roast-coffee",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple, functional, user interfaces",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Mitch Crowe",
+  "license": "MIT",
   "devDependencies": {
     "coffee-loader": "^0.7.2",
     "coffee-script": "^1.10.0",
