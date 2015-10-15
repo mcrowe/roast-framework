@@ -1,5 +1,7 @@
 # Roast
 
+__Warning!__ This is a proof of concept that I *may* turn in to an actual library. Use at your own risk.
+
 An insanely simple, functional library for building user interfaces.
 
 Roast is inspired by The Elm Architecture, and the Redux library. It provides a beautifully simple way to build user interfaces, using Coffeescript.

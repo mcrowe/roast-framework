@@ -1,4 +1,4 @@
-Roast = require('./roast')
+Roast = require './roast'
 
 {div, button} = Roast.elements
 
@@ -15,7 +15,7 @@ reduce = (model, action, data) ->
 
 view = (go, value) ->
   div 
-    className: 'item'
+    className: 'counter'
     [
       button 
         onclick: -> go 'DECREMENT'
@@ -30,4 +30,4 @@ view = (go, value) ->
 initialModel = 1
 
 
-Roast.start(initialModel, reduce, view)
+Roast.start initialModel, reduce, view

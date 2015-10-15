@@ -1,6 +1,6 @@
-{map} = require('lodash')
-Roast = require('./roast')
-{tweak} = require('./util')
+{map} = require 'lodash'
+Roast = require './roast'
+{tweak} = require './util'
 
 {div, button} = Roast.elements
 
@@ -33,8 +33,7 @@ reduce = (model, action, data) ->
 
 counter = (go, index, value) ->
   div 
-    className: 'item'
-    id: 'item'
+    className: 'counter'
     [
       button 
         onclick: -> go 'DECREMENT', index

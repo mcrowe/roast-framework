@@ -1,7 +1,7 @@
-h = require('virtual-dom/h')
-diff = require('virtual-dom/diff')
-patch = require('virtual-dom/patch')
-createElement = require('virtual-dom/create-element')
+h = require 'virtual-dom/h'
+diff = require 'virtual-dom/diff'
+patch = require 'virtual-dom/patch'
+createElement = require 'virtual-dom/create-element'
 
 Roast = {}
 
@@ -21,7 +21,7 @@ node = (tag) ->
 
 Roast.elements = {}
 
-TAGS = ['div', 'button', 'h1', 'ul', 'li', 'label', 'input', 'form', 'footer', 'span']
+TAGS = "div span header footer main section p br hr a ul li dl dt dd table tr td th tbody thead h1 h2 h3 h4 h5 h6 em strong form button label input select".split(' ')
 
 for tag in TAGS
   Roast.elements[tag] = node tag

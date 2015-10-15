@@ -1,10 +1,10 @@
-Roast = require('./roast')
+Roast = require './roast'
 
-{map, partial, extend, filter} = require('lodash')
+{map, partial, extend, filter} = require 'lodash'
 
 {h1, ul, li, label, input, form, button, div, footer, span} = Roast.elements
 
-{tweak, count} = require('./util')
+{tweak, count} = require './util' 
 
 
 
@@ -21,7 +21,7 @@ initialModel = {
 
 toggleTodo = (todos, idx) ->
   tweak todos, idx, (todo) ->
-    extend(todo, done: !todo.done)
+    extend todo, done: !todo.done
 
 
 buildTodo = (title) ->
@@ -48,13 +48,13 @@ reduce = (model, action, data) ->
     
     when 'TOGGLE'
       idx = data
-      extend model, todos: toggleTodo(model.todos, idx)
+      extend model, todos: toggleTodo model.todos, idx
 
     when 'ADD_TODO'
-      newTodo = buildTodo(model.field)
+      newTodo = buildTodo model.field
 
       extend model,
-        todos: model.todos.concat(newTodo)
+        todos: model.todos.concat newTodo
         field: ''
 
     when 'UPDATE_FIELD'
@@ -114,11 +114,11 @@ view = (go, model) ->
     footer [
       span
         class: 'remaining-count'
-        remainingCount(model)
+        remainingCount model
       '/'
       span
         class: 'total-count'
-        totalCount(model)
+        totalCount model
     ]
 
   ]
@@ -126,4 +126,4 @@ view = (go, model) ->
 
 # Glue --------------------------
 
-Roast.start(initialModel, reduce, view)
+Roast.start initialModel, reduce, view

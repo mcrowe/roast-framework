@@ -1,2 +1,2 @@
 require('./main.css');
-require('./counter');
+require('./todo-mvc');
